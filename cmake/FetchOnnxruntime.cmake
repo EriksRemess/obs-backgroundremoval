@@ -8,7 +8,7 @@ set(CUSTOM_ONNXRUNTIME_HASH
     ""
     CACHE STRING "Hash of a downloaded ONNX Runtime tarball")
 
-set(Onnxruntime_VERSION "1.17.1")
+set(Onnxruntime_VERSION "1.19.0")
 
 if(CUSTOM_ONNXRUNTIME_URL STREQUAL "")
   set(USE_PREDEFINED_ONNXRUNTIME ON)
@@ -38,7 +38,7 @@ if(USE_PREDEFINED_ONNXRUNTIME)
       set(Onnxruntime_HASH SHA256=70B6F536BB7AB5961D128E9DBD192368AC1513BFFB74FE92F97AAC342FBD0AC1)
     else()
       set(Onnxruntime_URL "${Onnxruntime_BASEURL}/onnxruntime-linux-x64-gpu-${Onnxruntime_VERSION}.tgz")
-      set(Onnxruntime_HASH SHA256=613C53745EA4960ED368F6B3AB673558BB8561C84A8FA781B4EA7FB4A4340BE4)
+      set(Onnxruntime_HASH SHA256=ef67eb280a3177a91aabf3143d863989b84251da7c253ac5dc797c7f87e1673f)
     endif()
   endif()
 else()
