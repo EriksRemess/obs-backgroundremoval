@@ -68,8 +68,8 @@ int createOrtSession(filter_data *tf)
 			const auto &api = Ort::GetApi();
 
 			// Folder in which TensorRT will place its cache
-			const char *tensorrt_cache_path =
-				"~/.cache/obs-backgroundremoval/tensorrt";
+			std::string home(getenv("HOME"));
+			const char* tensorrt_cache_path = strdup((home + "/.cache/obs-backgroundremoval/tensorrt").c_str());
 
 			// Initialize TensorRT provider options
 			OrtTensorRTProviderOptionsV2 *tensorrt_options;
